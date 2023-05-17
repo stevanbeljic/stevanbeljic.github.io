@@ -131,6 +131,36 @@
         .invert {
             filter: invert(1);
         }
+
+        .grid-about {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: white;
+        }
+
+        .card:hover {
+            transform: scale(1.08);
+        }
+
+        .card h3 {
+            color: #202f36;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .card p {
+            color: #202f36;
+            text-align:start;
+        }
         
     </style>
 </head>
@@ -154,7 +184,26 @@
         </section>
         <section id="about" class="odd"> 
             <h2>About</h2>
-            This page has stuff about me<br><br>
+            <div class="grid-about">
+                <div class="card">
+                    <h3>Education</h3>
+                    <p>I am an undergraduate student at the University of Calgary, expecting to graduate in April 2024.</p>
+                    <p>In my final year of dual Computer Science (B.Sc) and Finance (B.Comm) degrees.</p>
+                    <p>Class taken include:<br>
+                    -Computer Networks (CPSC 441)<br>
+                    -Principles of Operating Systems (CPSC 457)
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Langauges</h3>
+                    <p>java and other shit</p>
+                </div>
+                <div class="card">
+                    <h3>More Information</h3>
+                    <p>gonna put stuff here :)
+                    </p>
+                </div>
+            </div>
 
         </section>
         <section id="projects" class="even"> 
