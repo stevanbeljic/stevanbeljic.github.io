@@ -30,6 +30,7 @@
             background-color: #202f36;
             text-align: center;
             color: white;
+            padding-top: 20px;
         }
 
         .even{
@@ -81,6 +82,52 @@
             background-color: transparent;
             color: #247BA0;
         }
+
+        .grid-contact {
+            display: grid;
+            gap: 10px;
+            background-color: transparent;
+            padding: 0px;
+            padding-bottom: 1cm;
+            grid-template-columns: auto max-content;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-item img {
+            width: auto;
+            background-color: transparent;
+            display: block;
+            margin: 0 auto;
+            justify-self: end;
+        }
+
+        .grid-item a {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: left;
+            padding: 20px;
+            font-size: 30px;
+            grid-column: 2;
+            justify-self: start;
+        }
+
+        .link {
+            background-color: transparent;
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .link-contact {
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            display: grid;
+            gap: 10px;
+            align-items: center;
+            grid-template-columns: auto max-content;
+            justify-content: flex-start;
+        }
         
     </style>
 </head>
@@ -115,7 +162,14 @@
 
         <section id="links" class="odd"> 
             <h2>Contact Me</h2>
-            This part will have links<br><br>
+            <div class="grid-contact">
+                <div class="grid-item"><img src="images/github.png"></div>
+                <a class="link-contact" href="https://github.com/stevanbeljic">GitHub</a>
+                <div class="grid-item"><img src="images/linkedin.png"></div>
+                <a class="link-contact" href="https://www.linkedin.com/in/stevanbeljic/">LinkedIn</a>
+                <div class="grid-item"><img src="images/instagram.png"></div>
+                <a class="link-contact" href="https://www.instagram.com/stevanbeljic/">Instagram</a>
+              </div>
 
         </section>
     </main>
