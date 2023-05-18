@@ -13,17 +13,18 @@
         }
 
         .title {
+            position: relative;
             font-size: 40px;
-            height: 100%;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content:center;
         }
 
         .title p {
-            font-size: 24px; /* Adjust the font size as desired */
-            margin-top: 0px; /* Add some spacing between the two elements */
+            font-size: 24px;
+            margin-top: 0px; 
         }
         
         .odd{
@@ -52,6 +53,7 @@
             width: 100%;
             box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
             background-color: white;
+            z-index: 999;
         }
 
         .navbar .name{
@@ -161,16 +163,49 @@
             color: #202f36;
             text-align:start;
         }
-        
+
+        .arrow {
+            border: black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .title .down {
+            position: absolute;
+            border: solid #202f36;
+            border-width: 0 3px 3px 0;
+            bottom: 0;
+            margin-bottom: 40px;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            animation: bob 2s ease-in-out infinite alternate;
+            transition: transform 0.3s;
+        }
+
+        @keyframes bob {
+            0% {
+                transform: rotate(45deg) translateY(0);
+            }
+            50% {
+                transform: rotate(45deg) translateX(-10px) translateY(-10px);
+            }
+            100% {
+                transform: rotate(45deg) translateY(0);
+            }
+    
+        }
     </style>
 </head>
 
 <body>
     <div class="navbar">
         <a class="name" href="#top" >Stevan Beljic</a>
-        <a href="#links">Links</a> <!--add reference to links section-->
-        <a href="#projects">Projects</a> <!--add reference to projects section-->
-        <a href="#about">About</a> <!--add reference to about section-->
+        <a href="#links">Links</a> 
+        <a href="#projects">Projects</a> 
+        <a href="#about">About</a>
         <a class="active" href="#top">Home</a>
     </div>
     <main>
@@ -178,6 +213,8 @@
         <section id="name" class="title"> 
             <h2>Stevan Beljic</h2>
             <p>Computer Science and Finance Student</p>
+            <br>
+            <p><a class="down" href="#about"></a></p>
             <br>
 
 
@@ -230,7 +267,7 @@
 
         </section>
         <section id="projects" class="even"> 
-            <h2>Projects</h2> <!--Implement with a grid and have cards/panels on the grid-->
+            <h2>Projects</h2> 
             This part will have projects<br><br>
 
         </section>
