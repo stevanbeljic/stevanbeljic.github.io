@@ -10,6 +10,7 @@
             margin-top: 0px;
             font-family: 'Raleway';font-size: 18px;
             height: 100%;
+            margin: 0px;
         }
 
         .title {
@@ -20,6 +21,7 @@
             flex-direction: column;
             align-items: center;
             justify-content:center;
+            box-shadow: 10px 2px 40px black;
         }
 
         .title p {
@@ -38,6 +40,7 @@
             background-color: white;
             text-align: center;
             color: #202f36;
+            
         }
 
         html, main {
@@ -136,7 +139,14 @@
 
         .grid-about {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-project {
+            display: grid;
+            grid-template-columns: repeat(60px, 1fr);
             gap: 20px;
             padding: 20px;
         }
@@ -148,6 +158,55 @@
             border-radius: 15px;
             box-shadow: white;
         }
+
+        .cardproject {
+            color: white;
+            padding: 20px;
+            width: 80%;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: black;
+            display: flex;
+            column-span: all;
+            margin: 10px;
+        }
+
+        .no-underline{
+            text-decoration: none;
+        }
+
+        .cardproject p{
+            background-color: #f1f1f1;
+            background-blend-mode:difference;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .cardproject.odd {
+            justify-content: flex-start;
+            justify-self: start;
+            background-color: #202f36;
+        }
+
+        .cardproject.even{
+            justify-content: flex-end;
+            justify-self: end;
+            background-color: #202436;
+        }
+
+        .cardproject:hover {
+            transform: translateX(10%);
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        .cardproject.even:hover {
+            transform: translateX(-10%);
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
 
         .card:hover {
             transform: scale(1.03);
@@ -268,7 +327,18 @@
         </section>
         <section id="projects" class="even"> 
             <h2>Projects</h2> 
-            This part will have projects<br><br>
+            <div class="grid-project">
+                <a href="https://github.com/stevanbeljic/stevanbeljic.github.io" target="_blank" class="no-underline"><div class="cardproject odd">
+                    <p>Hello</p>
+                </div></a>
+                <div class="cardproject even">
+                    <p>Hello again</p>
+                </div>
+                <div class="cardproject odd">
+                    <p>Hello</p>
+                </div>
+
+            </div>
 
         </section>
 
