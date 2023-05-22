@@ -146,7 +146,7 @@
 
         .grid-project {
             display: grid;
-            grid-template-columns: repeat(60px, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             gap: 20px;
             padding: 20px;
         }
@@ -167,7 +167,6 @@
             border-radius: 15px;
             box-shadow: black;
             display: flex;
-            column-span: all;
             margin: 10px;
         }
 
@@ -176,11 +175,13 @@
         }
 
         .cardproject p{
-            background-color: #f1f1f1;
+            background-color: #586496;
             background-blend-mode:difference;
-            color: black;
-            padding: 10px;
+            color: white;
+            padding: 5px;
             border-radius: 5px;
+            margin-left: 20px;
+            margin-right: 20px;
         }
 
         .cardproject.odd {
@@ -202,9 +203,15 @@
         }
 
         .cardproject.even:hover {
-            transform: translateX(-10%);
+            transform: translateX(10%);
             margin-left: 5%;
             margin-right: 5%;
+        }
+
+        .project-img {
+            max-width: 15%;
+            height: auto;
+            border: 3px solid #586496;
         }
 
 
@@ -329,13 +336,15 @@
             <h2>Projects</h2> 
             <div class="grid-project">
                 <a href="https://github.com/stevanbeljic/stevanbeljic.github.io" target="_blank" class="no-underline"><div class="cardproject odd">
-                    <p>Hello</p>
+                    <p>This is the website you are currently on. This website was programmed in HTML and CSS, and hosted on Github Pages. It is used to exhibit some of the programming languages I know, education, past projects and assignments, as well as contact methods.</p>
+                    <img src="images/Site screenshot.png" class="project-img">
                 </div></a>
-                <div class="cardproject even">
-                    <p>Hello again</p>
-                </div>
+                <a href="https://github.com/maxwell-kepler/Bros-In-A-Bun.git" target="_blank" class="no-underline"><div class="cardproject even">
+                    <img src="images/brosinabun.png" class="project-img">
+                    <p>This an inventory management database for the fictional sandwich restaurant, Bros in a Bun. The website needs to be hosted locally on XAMPP in order to run, and was programmed in PHP, HTML, and CSS. The database uses MariaDB and also runs with XAMPP on the localhost. This website allows users to order custom-made sandwiches from the restaurant, or allow the manager to view and update inventory levels.</p>
+                </div></a>
                 <div class="cardproject odd">
-                    <p>Hello</p>
+                    <p>Self-checkout machine software to be added here</p>
                 </div>
 
             </div>
