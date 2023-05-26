@@ -1,269 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Stevan Beljic - Software Developer</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <meta name="view" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-    <style>
-        body {
-            margin-top: 0px;
-            font-family: 'Raleway';font-size: 18px;
-            height: 100%;
-            margin: 0px;
-        }
-
-        .title {
-            position: relative;
-            font-size: 40px;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content:center;
-            box-shadow: 10px 2px 40px black;
-        }
-
-        .title p {
-            font-size: 24px;
-            margin-top: 0px; 
-        }
-        
-        .odd{
-            background-color: #202f36;
-            text-align: center;
-            color: white;
-            padding-top: 20px;
-        }
-
-        .even{
-            background-color: white;
-            text-align: center;
-            color: #202f36;
-            
-        }
-
-        html, main {
-            scroll-behavior: smooth;
-            height: 100%;
-        }
-
-        .navbar {
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
-            background-color: white;
-            z-index: 999;
-        }
-
-        .navbar .name{
-            float:left;
-            color: #247BA0;
-            font-size: 25px;
-            text-align: center;
-            vertical-align: center;
-            padding: 10px 100px;
-        }
-
-        .navbar a{
-            float:right;
-            color: #247BA0;
-            text-align: center;
-            padding: 13px 20px;
-            vertical-align: center;
-            font-size: 20px;
-            text-decoration: none;
-        }
-
-        .navbar a:hover{
-            background-color: #247BA0;
-            color: white;
-        }
-
-        .navbar a.name:hover{
-            background-color: transparent;
-            color: #247BA0;
-        }
-
-        .grid-contact {
-            display: grid;
-            gap: 10px;
-            background-color: transparent;
-            padding: 0px;
-            grid-template-columns: auto max-content;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .grid-item img {
-            width: auto;
-            background-color: transparent;
-            display: block;
-            margin: 0 auto;
-            justify-self: end;
-        }
-
-        .grid-item a {
-            background-color: rgba(255, 255, 255, 0.8);
-            text-align: left;
-            padding: 20px;
-            font-size: 30px;
-            grid-column: 2;
-            justify-self: start;
-        }
-
-        .link {
-            background-color: transparent;
-            text-align: center;
-            padding: 20px;
-            font-size: 30px;
-        }
-
-        .link-contact {
-            font-size: 20px;
-            text-decoration: none;
-            color: white;
-            display: grid;
-            gap: 10px;
-            align-items: center;
-            grid-template-columns: auto max-content;
-            justify-content: flex-start;
-        }
-
-        .invert {
-            filter: invert(1);
-        }
-
-        .grid-about {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .grid-project {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .card {
-            background-color: #f1f1f1;
-            padding: 20px;
-            text-align: center;
-            border-radius: 15px;
-            box-shadow: white;
-        }
-
-        .cardproject {
-            color: white;
-            padding: 20px;
-            width: 80%;
-            text-align: center;
-            border-radius: 15px;
-            box-shadow: black;
-            display: flex;
-            margin: 10px;
-        }
-
-        .no-underline{
-            text-decoration: none;
-        }
-
-        .cardproject p{
-            background-color: #586496;
-            background-blend-mode:difference;
-            color: white;
-            padding: 5px;
-            border-radius: 5px;
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-
-        .cardproject.odd {
-            justify-content: flex-start;
-            justify-self: start;
-            background-color: #202f36;
-        }
-
-        .cardproject.even{
-            justify-content: flex-end;
-            justify-self: end;
-            background-color: #202436;
-        }
-
-        .cardproject:hover {
-            transform: translateX(10%);
-            margin-left: 5%;
-            margin-right: 5%;
-        }
-
-        .cardproject.even:hover {
-            transform: translateX(10%);
-            margin-left: 5%;
-            margin-right: 5%;
-        }
-
-        .project-img {
-            max-width: 15%;
-            height: auto;
-            border: 3px solid #586496;
-        }
-
-
-        .card:hover {
-            transform: scale(1.03);
-        }
-
-        .card h3 {
-            color: #202f36;
-            font-size: 25px;
-            font-weight: 800;
-        }
-
-        .card p {
-            color: #202f36;
-            text-align:start;
-        }
-
-        .arrow {
-            border: black;
-            border-width: 0 3px 3px 0;
-            display: inline-block;
-            padding: 3px;
-        }
-
-        .title .down {
-            position: absolute;
-            border: solid #202f36;
-            border-width: 0 3px 3px 0;
-            bottom: 0;
-            margin-bottom: 40px;
-            display: inline-block;
-            padding: 3px;
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-            animation: bob 2s ease-in-out infinite alternate;
-            transition: transform 0.3s;
-        }
-
-        @keyframes bob {
-            0% {
-                transform: rotate(45deg) translateY(0);
-            }
-            50% {
-                transform: rotate(45deg) translateX(-10px) translateY(-10px);
-            }
-            100% {
-                transform: rotate(45deg) translateY(0);
-            }
     
-        }
-    </style>
 </head>
 
 <body>
@@ -307,7 +50,7 @@
                     </p>
                 </div>
                 <div class="card">
-                    <h3>Langauges</h3>
+                    <h3>Languages</h3>
                     <p>-Java (High)<br>
                         -Python (Intermediate)<br>
                         -C++ (Intermediate)<br>
@@ -336,15 +79,18 @@
             <h2>Projects</h2> 
             <div class="grid-project">
                 <a href="https://github.com/stevanbeljic/stevanbeljic.github.io" target="_blank" class="no-underline"><div class="cardproject odd">
+                    <h3>Personal Website</h3>
                     <p>This is the website you are currently on. This website was programmed in HTML and CSS, and hosted on Github Pages. It is used to exhibit some of the programming languages I know, education, past projects and assignments, as well as contact methods.</p>
                     <img src="images/Site screenshot.png" class="project-img">
                 </div></a>
-                <a href="https://github.com/maxwell-kepler/Bros-In-A-Bun.git" target="_blank" class="no-underline"><div class="cardproject even">
+                <a href="https://github.com/maxwell-kepler/Bros-In-A-Bun.git" target="_blank" class="no-underline"><div class="cardproject odd">
+                    <h3>Bros In a Bun</h3>
                     <p>This an inventory management database for the fictional sandwich restaurant, Bros in a Bun. The website needs to be hosted locally on XAMPP in order to run, and was programmed in PHP, HTML, and CSS. The database uses MariaDB and also runs with XAMPP on the localhost. This website allows users to order custom-made sandwiches from the restaurant, or allow the manager to view and update inventory levels. Orders placed by customers automatically decrement the stock of corresponding items ordered in the database. Project done for CPSC 471 alongside Maxwell Kepler.</p>
                     <img src="images/brosinabun.png" class="project-img">
                 </div></a>
                 <div class="cardproject odd">
-                    <p>Self-checkout machine software to be added here</p>
+                    <h3>Fitness App</h3>
+                    <p>Workout Generator app coming soon...</p>
                 </div>
 
             </div>
@@ -366,7 +112,8 @@
             <br>
         </section>
     </main>
-
-
+    <footer>
+        © 2023 Stevan Beljic
+    </footer>
 </body>
 </html>

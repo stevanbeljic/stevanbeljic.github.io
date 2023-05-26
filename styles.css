@@ -1,0 +1,254 @@
+
+        body {
+            font-family: 'Raleway';font-size: 18px;
+            height: 100%;
+            margin: 0px;
+        }
+
+        footer {
+            color: white;
+            background-color: #202f36;
+            padding: 20px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .title {
+            position: relative;
+            font-size: 40px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content:center;
+            box-shadow: 10px 2px 40px black;
+        }
+
+        .title p {
+            font-size: 24px;
+            margin-top: 0px; 
+        }
+        
+        .odd{
+            background-color: #202f36;
+            text-align: center;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .even{
+            background-color: white;
+            text-align: center;
+            color: #202f36;
+            
+        }
+
+        html, main {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+            background-color: white;
+            z-index: 999;
+        }
+
+        .navbar .name{
+            float:left;
+            color: #247BA0;
+            font-size: 25px;
+            text-align: center;
+            vertical-align: center;
+            padding: 10px 100px;
+        }
+
+        .navbar a{
+            float:right;
+            color: #247BA0;
+            text-align: center;
+            padding: 13px 20px;
+            vertical-align: center;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover{
+            background-color: #247BA0;
+            color: white;
+        }
+
+        .navbar a.name:hover{
+            background-color: transparent;
+            color: #247BA0;
+        }
+
+        .grid-contact {
+            display: grid;
+            gap: 10px;
+            background-color: transparent;
+            padding: 0px;
+            grid-template-columns: auto max-content;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-item img {
+            width: auto;
+            background-color: transparent;
+            display: block;
+            margin: 0 auto;
+            justify-self: end;
+        }
+
+        .grid-item a {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: left;
+            padding: 20px;
+            font-size: 30px;
+            grid-column: 2;
+            justify-self: start;
+        }
+
+        .link {
+            background-color: transparent;
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .link-contact {
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            display: grid;
+            gap: 10px;
+            align-items: center;
+            grid-template-columns: auto max-content;
+            justify-content: flex-start;
+        }
+
+        .invert {
+            filter: invert(1);
+        }
+
+        .grid-about {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-project {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: white;
+        }
+
+        .cardproject {
+            color: white;
+            padding: 20px;
+            width: 80%;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: black;
+            display: flex;
+            margin: 10px;
+            vertical-align: 50%;
+        }
+
+        .no-underline{
+            text-decoration: none;
+        }
+
+        .cardproject p{
+            background-color: #586496;
+            background-blend-mode:difference;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .cardproject.odd {
+            justify-content: flex-start;
+            justify-self: start;
+            background-color: #202f36;
+            text-align: start;
+        }
+
+        .cardproject:hover {
+            transform: translateX(5%);
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        .project-img {
+            max-width: 15%;
+            height: auto;
+            border: 3px solid #586496;
+        }
+
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card h3 {
+            color: #202f36;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .card p {
+            color: #202f36;
+            text-align:start;
+        }
+
+        .arrow {
+            border: black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .title .down {
+            position: absolute;
+            border: solid #202f36;
+            border-width: 0 3px 3px 0;
+            bottom: 0;
+            margin-bottom: 40px;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            animation: bob 2s ease-in-out infinite alternate;
+            transition: transform 0.3s;
+        }
+
+        @keyframes bob {
+            0% {
+                transform: rotate(45deg) translateY(0);
+            }
+            50% {
+                transform: rotate(45deg) translateX(-10px) translateY(-10px);
+            }
+            100% {
+                transform: rotate(45deg) translateY(0);
+            }
+    
+        }
