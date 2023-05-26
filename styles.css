@@ -40,6 +40,7 @@
             background-color: white;
             text-align: center;
             color: #202f36;
+            padding-top: 20px;
             
         }
 
@@ -233,7 +234,7 @@
             bottom: 0;
             margin-bottom: 40px;
             display: inline-block;
-            padding: 3px;
+            padding: 10px;
             transform: rotate(45deg);
             -webkit-transform: rotate(45deg);
             animation: bob 2s ease-in-out infinite alternate;
