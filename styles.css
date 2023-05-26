@@ -199,7 +199,7 @@
         }
 
         .project-img {
-            max-width: 15%;
+            width: 200px;
             height: auto;
             border: 3px solid #586496;
         }
