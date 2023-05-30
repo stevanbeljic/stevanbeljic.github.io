@@ -34,14 +34,17 @@
             text-align: center;
             color: white;
             padding-top: 20px;
+            
         }
 
-        .even{
+        .even {
             background-color: white;
             text-align: center;
             color: #202f36;
+            position: relative;
             padding-top: 20px;
-            
+            padding-bottom: 20px;
+            box-shadow: 10px 2px 40px black;
         }
 
         html, main {
@@ -165,10 +168,12 @@
             width: 80%;
             text-align: center;
             border-radius: 15px;
-            box-shadow: black;
+            box-shadow: 2px 5px 5px grey;
             display: flex;
             margin: 10px;
             vertical-align: 50%;
+            position: static;
+            border: 2px solid transparent;
         }
 
         .no-underline{
@@ -193,11 +198,12 @@
         }
 
         .cardproject:hover {
-            transform: translateX(5%);
-            margin-left: 5%;
-            margin-right: 5%;
+            /*transform: translateX(5%);*/
+            border: 2px solid #05c29d;
+            animation: shiftright .25s ease-in-out 0s 1 alternate;
+            animation-fill-mode: forwards;
         }
-
+        
         .project-img {
             width: 200px;
             height: auto;
@@ -252,4 +258,13 @@
                 transform: rotate(45deg) translateY(0);
             }
     
+        }
+
+        @keyframes shiftright {
+            0% {
+                transform: translateX(0%);
+            }
+            100%{
+                transform: translateX(5%);
+            }
         }
