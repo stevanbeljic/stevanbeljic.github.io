@@ -1,0 +1,90 @@
+body {
+    font-family: 'Raleway';
+    margin: 0;
+    font-size: 30px;
+
+    @media (min-width: 601px) {
+        font-size: 20px;
+    }
+}
+
+#navbar {
+    border-bottom: solid black 2px;
+    margin: 0;
+    position:sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: grey 2px 0px 10px;
+    background-color: white;
+    
+    div {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    & nav {
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & #divlinks {
+            display: flex;
+            justify-content: end;
+            
+            div {
+                border: solid transparent 2px;
+                border-radius: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+
+                a:hover {
+                    color:white;
+                }
+            }
+
+            & div:hover {
+                color: white;
+            }
+
+            #github:hover {
+                background-color: purple;
+            }
+
+            #linkedin:hover {
+                background-color: lightskyblue;
+            }
+
+            #mail:hover {
+                background-color: orange;
+            }
+        }
+    }
+
+    & div {
+        align-items: center;
+    }
+}
+
+#main {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+
+    .card {
+        margin: 20px;
+        width: 60%;
+        text-align: center;
+        border: solid black 2px;
+        box-shadow: grey 2px 5px 10px;
+        padding-bottom: 20px;
+    }
+}
